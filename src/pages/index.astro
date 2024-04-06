@@ -1,16 +1,13 @@
 ---
-
+import Header from "../components/header.astro";
+import HeroSection from "../components/sections/hero-section.astro";
+import MainLayout from "../layouts/main-layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- TODO: Add a description -->
+<MainLayout title="Santiago García | Portfolio" description="Lorem bla bla">
+  <Header />
+  <main>
+    <HeroSection />
+  </main>
+</MainLayout>

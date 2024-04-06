@@ -1,0 +1,31 @@
+---
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/aileron/400.css";
+import "@fontsource/aileron/700.css";
+import "@fontsource/aileron/800.css";
+import Background from "../components/background.astro";
+
+interface Props {
+  description: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="nofollow, noindex" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-neutral-950 font-aileron text-neutral-50">
+    <slot />
+    <Background />
+  </body>
+</html>

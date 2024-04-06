@@ -1,0 +1,45 @@
+---
+import GithubIcon from "../icons/github-icon.astro";
+import LinkedinIcon from "../icons/linkedin-icon.astro";
+---
+
+<section class="mx-auto max-w-screen-md px-4">
+  <div class="flex flex-col gap-5 pt-28">
+    <div class="flex flex-col gap-1">
+      <p class="font-jetbrains font-bold leading-[1] text-neutral-400">
+        /* Fullstack Developer */
+      </p>
+      <h1 class="w-min text-7xl font-extrabold leading-[0.85] tracking-tight">
+        Santiago García<span class="text-purple-500">;</span>
+      </h1>
+    </div>
+    <p class="max-w-[400px] text-pretty text-sm text-neutral-400">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellat
+      voluptas ipsam doloribus deserunt voluptatum fuga.
+    </p>
+    <div class="flex items-center gap-4">
+      <a
+        href="#projects"
+        class="grid w-fit rounded bg-gradient-to-t from-purple-900 to-purple-500 px-4 py-2 font-jetbrains font-bold"
+      >
+        getProjects()
+      </a>
+      <a
+        aria-label="Github Icon"
+        target="_blank"
+        href="https://github.com/yusborinchit"
+        class="rounded-full ring-purple-500 hover:ring-2"
+      >
+        <GithubIcon width={36} height={36} />
+      </a>
+      <a
+        aria-label="LinkedIn Icon"
+        target="_blank"
+        href="https://www.linkedin.com/in/santiago-garcia-387696253/"
+        class="rounded ring-purple-500 hover:ring-2"
+      >
+        <LinkedinIcon width={36} height={36} />
+      </a>
+    </div>
+  </div>
+</section>
