@@ -20,7 +20,7 @@ import LinkedinIcon from "../icons/linkedin-icon.astro";
     <div class="flex items-center gap-4">
       <a
         href="#projects"
-        class="grid w-fit rounded bg-gradient-to-t from-purple-900 to-purple-500 px-4 py-2 font-jetbrains font-bold"
+        class="grid w-fit rounded bg-gradient-to-t from-purple-900 to-purple-500 px-4 py-2 font-jetbrains font-bold transition-[filter] hover:brightness-75"
       >
         getProjects()
       </a>
@@ -28,7 +28,7 @@ import LinkedinIcon from "../icons/linkedin-icon.astro";
         aria-label="Github Icon"
         target="_blank"
         href="https://github.com/yusborinchit"
-        class="rounded-full ring-purple-500 hover:ring-2"
+        class="rounded-full ring-purple-500 transition-transform hover:scale-110 hover:ring-2 focus:ring-2"
       >
         <GithubIcon width={36} height={36} />
       </a>
@@ -36,7 +36,7 @@ import LinkedinIcon from "../icons/linkedin-icon.astro";
         aria-label="LinkedIn Icon"
         target="_blank"
         href="https://www.linkedin.com/in/santiago-garcia-387696253/"
-        class="rounded ring-purple-500 hover:ring-2"
+        class="rounded ring-purple-500 transition-transform hover:scale-110 hover:ring-2"
       >
         <LinkedinIcon width={36} height={36} />
       </a>
