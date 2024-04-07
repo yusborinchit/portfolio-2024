@@ -1,0 +1,34 @@
+---
+import EducationCard from "../education-card.astro";
+---
+
+<section
+  id="education"
+  class="mx-auto flex max-w-screen-md flex-col items-center gap-5 px-4 pt-32"
+>
+  <h2 class="flex items-center gap-2 font-jetbrains font-extrabold leading-[1]">
+    <span class="text-xl text-neutral-500">{"<!--"}</span>
+    <span class="text-3xl tracking-tight">Educational Background</span>
+    <span class="text-xl text-neutral-500">{"-->"}</span>
+  </h2>
+  <p class="max-w-[400px] text-pretty text-center text-sm text-neutral-400">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellat
+    voluptas ipsam doloribus.
+  </p>
+  <div class="grid grid-cols-2 gap-6">
+    <EducationCard
+      slug="Technological high school"
+      name="Instituto Tecnológico Superior - Arias Balparda"
+      duration="From 2020 to 2023"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur ea dignissimos quia tempora minima possimus hic doloribus!"
+      href="https://its.utu.edu.uy/"
+    />
+    <EducationCard
+      slug="University of Engineering"
+      name="Facultad de Ingeniería - Universidad de la República"
+      duration="From 2023 until today"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur ea dignissimos quia tempora minima possimus hic doloribus!"
+      href="https://www.fing.edu.uy/"
+    />
+  </div>
+</section>
