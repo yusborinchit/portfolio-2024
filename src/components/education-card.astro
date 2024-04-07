@@ -38,7 +38,7 @@ const { slug, name, duration, description, href } = Astro.props;
     {description}
   </p>
   <footer class="pt-8">
-    <a href="#" class="group flex w-fit gap-1 font-jetbrains text-sm">
+    <a href={href} class="group flex w-fit gap-1 font-jetbrains text-sm">
       <span class="text-purple-500">[</span>
       <span
         class="flex items-center gap-1 underline-offset-2 group-hover:underline"
