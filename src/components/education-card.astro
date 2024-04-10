@@ -3,14 +3,14 @@ import CalendarIcon from "./icons/calendar-icon.astro";
 import HighschoolIcon from "./icons/highschool-icon.astro";
 
 interface Props {
-  slug: string;
-  name: string;
+  subtitle: string;
+  title: string;
   duration: string;
   description: string;
   href: string;
 }
 
-const { slug, name, duration, description, href } = Astro.props;
+const { subtitle, title, duration, description, href } = Astro.props;
 ---
 
 <article
@@ -22,10 +22,10 @@ const { slug, name, duration, description, href } = Astro.props;
   </div>
   <header class="flex flex-col gap-1">
     <p class="font-jetbrains text-xs uppercase leading-[1] text-purple-500">
-      {slug}
+      {subtitle}
     </p>
     <h3 class="text-2xl font-bold leading-[1]">
-      {name}
+      {title}
     </h3>
   </header>
   <div class="flex items-center gap-1 text-neutral-700">
@@ -38,7 +38,11 @@ const { slug, name, duration, description, href } = Astro.props;
     {description}
   </p>
   <footer class="pt-8">
-    <a href={href} class="group flex w-fit gap-1 font-jetbrains text-sm">
+    <a
+      target="_blank"
+      href={href}
+      class="group flex w-fit gap-1 font-jetbrains text-sm"
+    >
       <span class="text-purple-500">[</span>
       <span
         class="flex items-center gap-1 underline-offset-2 group-hover:underline"
