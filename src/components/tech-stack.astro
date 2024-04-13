@@ -1,0 +1,37 @@
+---
+import TechBadge from "./tech-badge.astro";
+
+const TECHS = {
+  NextJs: {
+    tech: "Next.js",
+    className: "border-neutral-700 bg-neutral-800 text-neutral-400",
+  },
+  TailwindCSS: {
+    tech: "TailwindCSS",
+    className: "border-sky-700 bg-sky-800 text-sky-400",
+  },
+  Astro: {
+    tech: "Astro",
+    className: "border-amber-700 bg-amber-800 text-amber-400",
+  },
+  TypeScript: {
+    tech: "TypeScript",
+    className: "border-blue-700 bg-blue-800 text-blue-400",
+  },
+} as const;
+
+interface Props {
+  techs: (keyof typeof TECHS)[];
+}
+
+const { techs } = Astro.props;
+---
+
+<ul class="flex flex-wrap items-center gap-1">
+  {
+    techs.map((techSlug, idx) => {
+      const { tech, className } = TECHS[techSlug];
+      return <TechBadge tech={tech} className={className} />;
+    })
+  }
+</ul>

@@ -24,7 +24,7 @@ const { subtitle, title, duration, description, href } = Astro.props;
     <p class="font-jetbrains text-xs uppercase leading-[1] text-purple-500">
       {subtitle}
     </p>
-    <h3 class="text-2xl font-bold leading-[1]">
+    <h3 class="text-2xl font-bold leading-[1] tracking-tight">
       {title}
     </h3>
   </header>
@@ -41,15 +41,15 @@ const { subtitle, title, duration, description, href } = Astro.props;
     <a
       target="_blank"
       href={href}
-      class="group flex w-fit gap-1 font-jetbrains text-sm"
+      class="group flex w-fit gap-1 font-jetbrains"
     >
-      <span class="text-purple-500">[</span>
+      <span aria-hidden="true" class="text-purple-500">[</span>
       <span
         class="flex items-center gap-1 underline-offset-2 group-hover:underline"
       >
         Visit Page
       </span>
-      <span class="text-purple-500">]</span>
+      <span aria-hidden="true" class="text-purple-500">]</span>
     </a>
   </footer>
 </article>

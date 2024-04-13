@@ -1,0 +1,17 @@
+---
+interface Props {
+  tech: string;
+  className?: string;
+}
+
+const { tech, className } = Astro.props;
+
+const colors =
+  className ?? "border-neutral-700 bg-neutral-800 text-neutral-400";
+---
+
+<li
+  class={`grid place-items-center rounded border px-2 py-0.5 font-jetbrains text-xs leading-[1] tracking-tight ${colors}`}
+>
+  {tech}
+</li>
