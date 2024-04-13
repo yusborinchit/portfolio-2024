@@ -29,9 +29,11 @@ const { techs } = Astro.props;
 
 <ul class="flex flex-wrap items-center gap-1">
   {
-    techs.map((techSlug, idx) => {
-      const { tech, className } = TECHS[techSlug];
-      return <TechBadge tech={tech} className={className} />;
-    })
+    techs.map((techSlug) => (
+      <TechBadge
+        tech={TECHS[techSlug].tech}
+        className={TECHS[techSlug].className}
+      />
+    ))
   }
 </ul>
