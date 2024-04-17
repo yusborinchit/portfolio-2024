@@ -1,4 +1,5 @@
 ---
+import SectionTitle from "../common/section-title.astro";
 import ProjectCard from "./project-card.astro";
 ---
 
@@ -6,11 +7,7 @@ import ProjectCard from "./project-card.astro";
   id="projects"
   class="mx-auto mt-28 flex max-w-screen-md flex-col items-center gap-5 px-4 pt-4"
 >
-  <h2 class="flex items-center gap-2 font-jetbrains font-extrabold leading-[1]">
-    <span aria-hidden="true" class="text-xl text-neutral-500">{"<!--"}</span>
-    <span class="text-3xl tracking-tight">My Projects</span>
-    <span aria-hidden="true" class="text-xl text-neutral-500">{"-->"}</span>
-  </h2>
+  <SectionTitle>My Projects</SectionTitle>
   <p class="max-w-[500px] text-center text-sm text-neutral-400">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet optio
     voluptas dolorem magni libero provident ex totam consequuntur
