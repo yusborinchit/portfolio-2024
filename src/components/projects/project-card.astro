@@ -1,41 +1,56 @@
 ---
-import TechStack from "./tech-stack.astro";
+import TechStack, { type Tech } from "./tech-stack.astro";
 
-// TODO: Add props
+interface Props {
+  type: "BackEnd Project" | "FrontEnd Project" | "FullStack Project";
+  title: string;
+  stack: Tech[];
+  description: string;
+  deploy: string;
+  repository: string;
+  image: string;
+  alt: string;
+}
+
+const { type, title, stack, description, deploy, repository, image, alt } =
+  Astro.props;
 ---
 
 <article
-  class="grid grid-cols-7 gap-4 overflow-hidden rounded-lg bg-gradient-to-t from-neutral-900/40 via-75%"
+  class="grid gap-4 overflow-hidden rounded-lg bg-gradient-to-t from-neutral-900/40 via-75% sm:grid-cols-7"
 >
-  <div class="col-span-4 flex flex-col gap-4 px-4 py-8">
+  <div class="flex flex-col gap-4 px-4 pb-8 pt-4 sm:col-span-4 sm:py-8">
     <header class="flex flex-col gap-1">
-      <p class="font-jetbrains text-xs uppercase leading-[1] text-purple-500">
-        FullStack Project
+      <p class="font-jetbrains text-sm uppercase leading-[1] text-purple-500">
+        {type}
       </p>
       <h3
         class="text-3xl font-bold leading-[1] tracking-tight underline-offset-2"
       >
-        Lorem ipsum dolor sit amet consectetur
+        {title}
       </h3>
     </header>
-    <div class="flex flex-wrap gap-1 font-jetbrains text-sm">
+    <div class="flex flex-wrap gap-1 font-jetbrains">
       <h4 class="w-full text-sm leading-[1.25] tracking-tight text-neutral-700">
         Tech Stack:
       </h4>
-      <TechStack techs={["Astro", "TailwindCSS", "TypeScript"]} />
+      <TechStack techs={stack} />
     </div>
-    <p class="text-sm text-neutral-400">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nisi quidem
-      animi aperiam accusantium deleniti!
+    <p class="text-neutral-400">
+      {description}
     </p>
-    <footer class="mt-10 flex items-center gap-4">
+    <footer class="mt-4 flex items-center gap-4 sm:mt-8">
       <a
-        href="#projects"
+        href={deploy}
         class="grid w-fit rounded bg-gradient-to-t from-purple-900 to-purple-500 px-4 py-2 font-jetbrains font-bold transition-[filter] hover:brightness-75"
       >
         getDeploy()
       </a>
-      <a target="_blank" href="#" class="group flex w-fit gap-1 font-jetbrains">
+      <a
+        target="_blank"
+        href={repository}
+        class="group flex w-fit gap-1 font-jetbrains"
+      >
         <span aria-hidden="true" class="text-purple-500">[</span>
         <span
           class="flex items-center gap-1 underline-offset-2 group-hover:underline"
@@ -46,7 +61,13 @@ import TechStack from "./tech-stack.astro";
       </a>
     </footer>
   </div>
-
-  <!-- TODO: Add image -->
-  <div class="col-span-3 bg-neutral-800"></div>
+  <picture
+    class="row-start-1 min-h-[260px] overflow-hidden bg-neutral-800 sm:col-span-3 sm:row-start-auto sm:h-auto"
+  >
+    <img
+      src={image}
+      alt={alt}
+      class="h-full w-full object-cover transition-transform hover:scale-125"
+    />
+  </picture>
 </article>

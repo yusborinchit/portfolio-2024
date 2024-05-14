@@ -1,0 +1,26 @@
+---
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+<article class="flex flex-col overflow-hidden rounded-lg sm:col-span-4">
+  <header class="flex items-center bg-neutral-900 p-2 px-4">
+    <div class="flex gap-2">
+      <div class="h-3 w-3 rounded-full bg-red-500"></div>
+      <div class="h-3 w-3 rounded-full bg-yellow-500"></div>
+      <div class="h-3 w-3 rounded-full bg-emerald-500"></div>
+    </div>
+    <h3 class="mx-auto font-jetbrains text-sm text-neutral-400">
+      {path}
+    </h3>
+    <div class="flex gap-2">
+      <div class="h-3 w-3 rounded-full"></div>
+      <div class="h-3 w-3 rounded-full"></div>
+      <div class="h-3 w-3 rounded-full"></div>
+    </div>
+  </header>
+  <slot />
+</article>

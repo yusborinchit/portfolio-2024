@@ -1,0 +1,45 @@
+---
+import SectionTitle from "../common/section-title.astro";
+import EmailIcon from "../icons/email-icon.astro";
+import GithubIcon from "../icons/github-icon.astro";
+import LinkedinIcon from "../icons/linkedin-icon.astro";
+import ContactForm from "./contact-form.astro";
+import InfoItem from "./info-item.astro";
+---
+
+<section
+  id="contact"
+  class="mx-auto mt-28 flex max-w-screen-md flex-col items-center gap-5 px-4 pt-4"
+>
+  <SectionTitle>Get In Touch</SectionTitle>
+  <p class="col-span-4 max-w-[400px] text-pretty text-center text-neutral-400">
+    Have a project in mind or want to discuss work opportunities? Feel free to
+    reach out, I'm excited to hear from you!
+  </p>
+  <div class="flex w-full flex-col-reverse gap-6 sm:flex-row sm:gap-2">
+    <ContactForm />
+    <ul class="flex flex-col gap-4 text-neutral-400">
+      <InfoItem
+        title="Email"
+        name="sgarciacedres@gmail.com"
+        href="mailto:sgarciacedres@gmail.com"
+      >
+        <EmailIcon width={42} height={42} />
+      </InfoItem>
+      <InfoItem
+        title="Github"
+        name="yusborinchit"
+        href="https://github.com/yusborinchit"
+      >
+        <GithubIcon width={42} height={42} />
+      </InfoItem>
+      <InfoItem
+        title="LinkedIn"
+        name="Santiago García"
+        href="https://www.linkedin.com/in/santiago-garcia-387696253/"
+      >
+        <LinkedinIcon width={42} height={42} />
+      </InfoItem>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<form class="flex w-full flex-col gap-4 font-jetbrains">
+  <div class="flex flex-col gap-1">
+    <label for="subject" class="font-aileron font-bold">
+      <span class="font-jetbrains text-purple-500">#</span> Your Subject:
+    </label>
+    <input
+      id="subject"
+      type="text"
+      placeholder="Write your subject here..."
+      class="rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-neutral-400 placeholder-neutral-700 focus-within:border-purple-500 focus-within:ring-purple-500 focus:border-purple-500 focus:ring-purple-500"
+    />
+  </div>
+  <div class="flex flex-col gap-1">
+    <label for="message" class="font-aileron font-bold">
+      <span class="font-jetbrains text-purple-500">#</span> Your Message:
+    </label>
+    <textarea
+      id="message"
+      rows="6"
+      placeholder="Write your message here..."
+      class="rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-neutral-400 placeholder-neutral-700 focus-within:border-purple-500 focus-within:ring-purple-500 focus:border-purple-500 focus:ring-purple-500"
+    ></textarea>
+  </div>
+  <div
+    class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-normal"
+  >
+    <button
+      class="grid w-full rounded bg-gradient-to-t from-purple-900 to-purple-500 px-4 py-2 font-jetbrains font-bold transition-[filter] hover:brightness-75 sm:w-fit"
+    >
+      submitMessage()
+    </button>
+    <a target="_blank" href="#" class="group flex gap-1 font-jetbrains">
+      <span aria-hidden="true" class="text-purple-500">[</span>
+      <span
+        class="flex items-center gap-1 underline-offset-2 group-hover:underline"
+      >
+        Download my CV
+      </span>
+      <span aria-hidden="true" class="text-purple-500">]</span>
+    </a>
+  </div>
+</form>

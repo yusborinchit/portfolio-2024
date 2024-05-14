@@ -18,10 +18,12 @@ const TECHS = {
     tech: "TypeScript",
     className: "border-blue-700 bg-blue-800 text-blue-400",
   },
-} as const;
+};
+
+export type Tech = keyof typeof TECHS;
 
 interface Props {
-  techs: (keyof typeof TECHS)[];
+  techs: Tech[];
 }
 
 const { techs } = Astro.props;

@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  name: string;
+  href: string;
+}
+
+const { title, name, href } = Astro.props;
+---
+
+<li class="flex items-center gap-2 px-4">
+  <div class="text-purple-500">
+    <slot />
+  </div>
+  <div class="flex flex-col gap-1">
+    <p class="font-bold leading-[1] text-neutral-50">{title}:</p>
+    <a href={href} class="font-jetbrains text-sm leading-[1] hover:underline">
+      {name}
+    </a>
+  </div>
+</li>
