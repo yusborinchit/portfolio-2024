@@ -1,15 +1,60 @@
 ---
+import MenuIcon from "../icons/menu-icon.astro";
 import HeaderLink from "./header-link.astro";
 ---
 
-<!-- TODO: Add responsive menu -->
-<header class="flex justify-center py-2 font-jetbrains">
-  <nav class="hidden items-center gap-1 sm:flex">
-    <span class="text-2xl leading-[1] text-neutral-500">{"{"}</span>
+<div id="scroll-watcher" data-scroll-watcher></div>
+<header
+  id="header"
+  class="transition-transparent sticky left-0 top-0 z-30 flex flex-col items-center justify-center bg-neutral-900 py-2 font-jetbrains md:flex-row md:bg-transparent md:data-[moving]:bg-neutral-900"
+>
+  <button id="toggle-menu" class="flex items-center gap-1 md:hidden">
+    <span aria-hidden="true" class="text-2xl leading-[1] text-neutral-500">
+      {"{"}
+    </span>
+    <MenuIcon width={48} height={48} />
+    <span aria-hidden="true" class="text-2xl leading-[1] text-neutral-500">
+      {"}"}
+    </span>
+  </button>
+  <nav
+    id="menu"
+    class="group hidden items-center gap-1 data-[toggle]:flex data-[toggle]:flex-col md:flex md:flex-row md:data-[toggle]:flex-row"
+  >
+    <span
+      aria-hidden="true"
+      class="hidden text-2xl leading-[1] text-neutral-500 md:inline-block"
+    >
+      {"{"}
+    </span>
     <HeaderLink href="#education" text="getEducation" />
     <HeaderLink href="#projects" text="getProjects" />
     <HeaderLink href="#about-me" text="getAboutMe" />
     <HeaderLink href="#contact" text="getInTouch" />
-    <span class="text-2xl leading-[1] text-neutral-500">{"}"}</span>
+    <span
+      aria-hidden="true"
+      class="hidden text-2xl leading-[1] text-neutral-500 md:inline-block"
+    >
+      {"}"}
+    </span>
   </nav>
 </header>
+
+<script>
+  const $button = document.getElementById("toggle-menu");
+  const $menu = document.getElementById("menu");
+  const $header = document.getElementById("header");
+  const $scrollWatcher = document.getElementById("scroll-watcher");
+
+  if ($button && $menu && $header && $scrollWatcher) {
+    const menuObserver = new IntersectionObserver((entries) => {
+      $header.toggleAttribute("data-moving", !entries[0].isIntersecting);
+    });
+
+    menuObserver.observe($scrollWatcher);
+
+    $button.addEventListener("click", () => {
+      $menu.toggleAttribute("data-toggle");
+    });
+  }
+</script>
