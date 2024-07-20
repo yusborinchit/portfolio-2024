@@ -1,12 +1,18 @@
-<form class="flex w-full flex-col gap-4 font-jetbrains">
+<form
+  action="https://formspree.io/f/manwqykv"
+  method="POST"
+  class="flex w-full flex-col gap-4 font-jetbrains"
+>
   <div class="flex flex-col gap-1">
-    <label for="subject" class="font-aileron font-bold">
-      <span class="font-jetbrains text-purple-500">#</span> Your Subject:
+    <input type="hidden" name="subject" value="PORTFOLIO 2024 CONTACTO" />
+    <label for="email" class="font-aileron font-bold">
+      <span class="font-jetbrains text-purple-500">#</span> Your Email:
     </label>
     <input
-      id="subject"
-      type="text"
-      placeholder="Write your subject here..."
+      id="email"
+      name="email"
+      type="email"
+      placeholder="Write your email here..."
       class="rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-neutral-400 placeholder-neutral-700 focus-within:border-purple-500 focus-within:ring-purple-500 focus:border-purple-500 focus:ring-purple-500"
     />
   </div>
@@ -16,6 +22,7 @@
     </label>
     <textarea
       id="message"
+      name="message"
       rows="6"
       placeholder="Write your message here..."
       class="rounded-md border border-neutral-800 bg-neutral-900 px-4 py-2 text-neutral-400 placeholder-neutral-700 focus-within:border-purple-500 focus-within:ring-purple-500 focus:border-purple-500 focus:ring-purple-500"

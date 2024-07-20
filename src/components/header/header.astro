@@ -8,7 +8,7 @@ import HeaderLink from "./header-link.astro";
   id="header"
   class="transition-transparent sticky left-0 top-0 z-30 flex flex-col items-center justify-center bg-neutral-900 py-2 font-jetbrains md:flex-row md:bg-transparent md:data-[moving]:bg-neutral-900"
 >
-  <button id="toggle-menu" class="flex items-center gap-1 md:hidden">
+  <button id="toggle-menu" class="flex items-center gap-1 min-[900px]:hidden">
     <span aria-hidden="true" class="text-2xl leading-[1] text-neutral-500">
       {"{"}
     </span>
@@ -19,21 +19,22 @@ import HeaderLink from "./header-link.astro";
   </button>
   <nav
     id="menu"
-    class="group hidden items-center gap-1 data-[toggle]:flex data-[toggle]:flex-col md:flex md:flex-row md:data-[toggle]:flex-row"
+    class="group hidden items-center data-[toggle]:flex data-[toggle]:flex-col min-[900px]:flex min-[900px]:flex-row min-[900px]:data-[toggle]:flex-row"
   >
     <span
       aria-hidden="true"
-      class="hidden text-2xl leading-[1] text-neutral-500 md:inline-block"
+      class="hidden text-2xl leading-[1] text-neutral-500 min-[900px]:inline-block"
     >
       {"{"}
     </span>
     <HeaderLink href="#education" text="getEducation" />
+    <HeaderLink href="#clients" text="getClients" />
     <HeaderLink href="#projects" text="getProjects" />
     <HeaderLink href="#about-me" text="getAboutMe" />
     <HeaderLink href="#contact" text="getInTouch" />
     <span
       aria-hidden="true"
-      class="hidden text-2xl leading-[1] text-neutral-500 md:inline-block"
+      class="hidden text-2xl leading-[1] text-neutral-500 min-[900px]:inline-block"
     >
       {"}"}
     </span>

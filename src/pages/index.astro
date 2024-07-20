@@ -1,5 +1,6 @@
 ---
 import AboutMeSection from "../components/about-me/about-me-section.astro";
+import ClientsSection from "../components/clients/clients-section.astro";
 import ContactSection from "../components/contact/contact-section.astro";
 import EducationSection from "../components/education/education-section.astro";
 import Footer from "../components/footer/footer.astro";
@@ -10,11 +11,15 @@ import MainLayout from "../layouts/main-layout.astro";
 ---
 
 <!-- TODO: Add a description -->
-<MainLayout title="Santiago García | Portfolio" description="Lorem bla bla">
+<MainLayout
+  title="Santiago García | Portfolio"
+  description="Santiago García's Portfolio"
+>
   <Header />
   <main>
     <HeroSection />
     <EducationSection />
+    <ClientsSection />
     <ProjectsSection />
     <AboutMeSection />
     <ContactSection />
