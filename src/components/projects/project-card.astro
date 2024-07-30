@@ -67,7 +67,9 @@ const { type, title, stack, description, deploy, repository, image, alt } =
       </a>
     </footer>
   </div>
-  <picture
+  <a
+    target="_blank"
+    href={deploy}
     class="row-start-1 min-h-[260px] overflow-hidden bg-neutral-800 sm:col-span-3 sm:row-start-auto sm:h-auto"
   >
     <Image
@@ -77,5 +79,5 @@ const { type, title, stack, description, deploy, repository, image, alt } =
       alt={alt}
       class="h-full w-full object-cover transition-transform hover:scale-125"
     />
-  </picture>
+  </a>
 </article>

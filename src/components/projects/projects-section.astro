@@ -16,21 +16,45 @@ import ProjectCard from "./project-card.astro";
     <ProjectCard
       type="FullStack Project"
       title="Simple Trello"
-      stack={["NextJs", "TailwindCSS", "Supabase", "TypeScript"]}
+      stack={[
+        "NextJs",
+        "TailwindCSS",
+        "Supabase",
+        "PostgreSQL",
+        "TypeScript",
+        "Framer Motion",
+      ]}
       description="A Trello clone built with NextJS 14 and TypeScript, using Supabase for OAuth, styled with Tailwind CSS."
       deploy="https://simple-trello-iota.vercel.app/"
       repository="https://github.com/yusborinchit/simple-trello"
-      image="/simple-trello-mockup.jpg"
+      image="/simple-trello-mockup.jpeg"
       alt=""
     />
     <ProjectCard
-      type="FrontEnd Project"
+      type="FullStack Project"
+      title="Note Editor"
+      stack={[
+        "NextJs",
+        "TailwindCSS",
+        "SQLite",
+        "NextAuth.js",
+        "Drizzle",
+        "TypeScript",
+      ]}
+      description="A ReactJS app built with TypeScript and Vite that generates JSON mockup data based on user input."
+      deploy="https://notes-editor-pi.vercel.app/"
+      repository="https://github.com/yusborinchit/notes-editor"
+      image="/notes-editor-mockup.jpeg"
+      alt=""
+    />
+    <ProjectCard
+      type="FullStack Project"
       title="Online Bash"
-      stack={["OOP", "TailwindCSS", "Vite", "TypeScript"]}
+      stack={["Vanilla", "OOP", "TailwindCSS", "Vite", "TypeScript"]}
       description="An interactive online bash environment built with ReactJS, TypeScript, OOP principles, and Vite."
       deploy="https://yusborin-bash.vercel.app/"
       repository="https://github.com/yusborinchit/online-bash"
-      image="/online-bash-mockup.jpg"
+      image="/online-bash-mockup.jpeg"
       alt=""
     />
     <ProjectCard
@@ -40,7 +64,7 @@ import ProjectCard from "./project-card.astro";
       description="A ReactJS app built with TypeScript and Vite that generates JSON mockup data based on user input."
       deploy="https://random-json.vercel.app/"
       repository="https://github.com/yusborinchit/random-json"
-      image="/random-json-mockup.jpg"
+      image="/random-json-mockup.jpeg"
       alt=""
     />
   </div>
