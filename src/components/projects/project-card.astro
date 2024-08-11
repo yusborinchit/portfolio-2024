@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import TechStack, { type Tech } from "./tech-stack.astro";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
   type:
@@ -15,14 +16,27 @@ interface Props {
   repository: string;
   image: string;
   alt: string;
+  className: string;
 }
 
-const { type, title, stack, description, deploy, repository, image, alt } =
-  Astro.props;
+const {
+  type,
+  title,
+  stack,
+  description,
+  deploy,
+  repository,
+  image,
+  alt,
+  className,
+} = Astro.props;
 ---
 
 <article
-  class="grid gap-4 overflow-hidden rounded-lg bg-gradient-to-t from-neutral-900/40 via-75% sm:grid-cols-7"
+  class={twMerge(
+    "grid gap-4 overflow-hidden rounded-lg bg-gradient-to-t from-neutral-900/40 via-75% sm:grid-cols-7 opacity-0 intersect:opacity-100 intersect:duration-700 intersect:animate-in intersect:fade-in-0",
+    className
+  )}
 >
   <div class="flex flex-col gap-4 px-4 pb-8 pt-4 sm:col-span-4 sm:py-8">
     <header class="flex flex-col gap-1">

@@ -3,6 +3,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/aileron/400.css";
 import "@fontsource/aileron/700.css";
 import "@fontsource/aileron/800.css";
+
 import Background from "../components/common/background.astro";
 
 interface Props {
@@ -26,5 +27,12 @@ const { description, title } = Astro.props;
   <body class="bg-neutral-950 font-aileron text-neutral-50">
     <slot />
     <Background />
+
+    <!-- Intersection Observer Plugin -->
+    <script
+      is:inline
+      defer
+      src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
+    ></script>
   </body>
 </html>
