@@ -1,6 +1,7 @@
 ---
 import CalendarIcon from "../icons/calendar-icon.astro";
 import HighschoolIcon from "../icons/highschool-icon.astro";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
   subtitle: string;
@@ -8,13 +9,17 @@ interface Props {
   duration: string;
   description: string;
   href: string;
+  className: string;
 }
 
-const { subtitle, title, duration, description, href } = Astro.props;
+const { subtitle, title, duration, description, href, className } = Astro.props;
 ---
 
 <article
-  class="flex flex-col gap-4 rounded-lg bg-gradient-to-t from-neutral-900/40 via-75% px-4 pb-8 pt-4 opacity-0 intersect:opacity-100 intersect:duration-700 intersect:animate-in intersect:fade-in-0 intersect:slide-in-from-bottom-12"
+  class={twMerge(
+    "flex flex-col gap-4 rounded-lg bg-gradient-to-t from-neutral-900/40 via-75% px-4 pb-8 pt-4 opacity-0 intersect:opacity-100 intersect:duration-700 intersect:animate-in intersect:fade-in-0",
+    className
+  )}
 >
   <div class="flex items-center gap-2 text-neutral-700">
     <HighschoolIcon width={32} height={32} />
