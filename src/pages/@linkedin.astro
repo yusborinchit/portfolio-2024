@@ -1,0 +1,25 @@
+---
+import Background from "../components/common/background.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Santiago Garcia | LinkedIn</title>
+  </head>
+  <body>
+    <h1>LinkedIn</h1>
+    <Background />
+
+    <!-- Redirect Script -->
+    <script is:inline>
+      window.location.replace(
+        "https://www.linkedin.com/in/santiago-garcia-387696253/"
+      );
+    </script>
+  </body>
+</html>

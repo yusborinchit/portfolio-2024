@@ -1,0 +1,23 @@
+---
+import Background from "../components/common/background.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Santiago Garcia | Github</title>
+  </head>
+  <body>
+    <h1>Github</h1>
+    <Background />
+
+    <!-- Redirect Script -->
+    <script is:inline>
+      window.location.replace("https://github.com/yusborinchit");
+    </script>
+  </body>
+</html>
