@@ -2,19 +2,7 @@
 import BrowserWindow from "./browser-window.astro";
 ---
 
-<section
-  id="about-me"
-  class="mx-auto mt-28 grid max-w-screen-md gap-6 px-4 pt-4 sm:grid-cols-7"
->
-  <div
-    class="row-start-2 min-h-[380px] rounded-lg bg-neutral-800 opacity-0 intersect:opacity-100 intersect:duration-700 intersect:animate-in intersect:fade-in-0 intersect:slide-in-from-left-12 sm:col-span-3 sm:row-start-auto"
-  >
-    <img
-      src="/me.jpeg"
-      alt="Santiago García's face"
-      class="h-full w-full rounded-lg object-cover"
-    />
-  </div>
+<section id="about-me" class="mx-auto mt-28 grid max-w-screen-md px-4 pt-4">
   <BrowserWindow path="~/src/README.md">
     <div
       class="flex min-h-[300px] flex-col gap-4 bg-gradient-to-t from-neutral-900/40 via-90% px-4 py-8 font-jetbrains font-thin [&>p]:text-neutral-400"
