@@ -51,6 +51,24 @@ import ProjectCard from "./project-card.astro";
     />
     <ProjectCard
       type="FullStack Project"
+      title="Stream Board"
+      stack={[
+        "NextJs",
+        "TailwindCSS",
+        "PostgreSQL",
+        "NextAuth.js",
+        "TypeScript",
+        "SocketIO",
+      ]}
+      description="A Next.js app built with TypeScript that provides a free, real-time stream deck for small streamers."
+      deploy="https://stream-board.vercel.app/"
+      repository="https://github.com/yusborinchit/stream-board"
+      image="/stream-board-mockup.jpeg"
+      alt="A screenshot of the Stream Board app."
+      className="intersect:slide-in-from-left-12"
+    />
+    <ProjectCard
+      type="FullStack Project"
       title="Online Bash"
       stack={["Vanilla", "OOP", "TailwindCSS", "Vite", "TypeScript"]}
       description="An interactive online bash environment built with TypeScript, OOP principles, and Vite."
@@ -58,7 +76,7 @@ import ProjectCard from "./project-card.astro";
       repository="https://github.com/yusborinchit/online-bash"
       image="/online-bash-mockup.jpeg"
       alt="A screenshot of the Online Bash app."
-      className="intersect:slide-in-from-left-12"
+      className="intersect:slide-in-from-right-12"
     />
     <ProjectCard
       type="FrontEnd Project"
@@ -75,7 +93,7 @@ import ProjectCard from "./project-card.astro";
       repository="https://github.com/yusborinchit/sorting-visualizer"
       image="/sort-visualizer-mockup.jpeg"
       alt="A screenshot of the Sort Algo Visualizer app."
-      className="intersect:slide-in-from-right-12"
+      className="intersect:slide-in-from-left-12"
     />
   </div>
 </section>
